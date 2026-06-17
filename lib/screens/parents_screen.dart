@@ -109,7 +109,7 @@ class ParentsScreen extends StatelessWidget {
       'icon': Icons.attach_money,
       'title': 'Comer saludable sin gastar de más',
       'subtitle': 'Alternativas económicas y nutritivas',
-      'content': 'Compra frutas y verduras de temporada. Sustituye carnes caras por legumbres (lentejas, garbanzos). La avena es más económica que los cereales azucarados. Congela frutas maduras para batidos. Compra en mercados locales en vez de supermercados.',
+      'content': 'Compra frutas y verduras de temporada. Sustituye carnes caras por legumbres (lentejas, garbanzos). La avena es más económica que los cereales azucarados. Congela frutas maduras para licuados. Compra en mercados locales en vez de supermercados.',
       'color': Color(0xFFF57C00),
     },
     {

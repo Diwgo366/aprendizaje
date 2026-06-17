@@ -12,13 +12,13 @@ class BreakfastScreen extends StatefulWidget {
 class _BreakfastScreenState extends State<BreakfastScreen> {
   final List<Map<String, dynamic>> _recipes = [
     {
-      'title': 'Avenada con frutas',
+      'title': 'Avena con frutas',
       'description': 'Energía natural para empezar el día',
       'time': '5 min',
       'icon': Icons.grain,
       'color': const Color(0xFFF9A825),
-      'ingredients': ['1/2 taza de avena', '1 taza de leche', '1 plátano', 'Fresas al gusto', '1 cucharada de miel'],
-      'instructions': 'Cocina la avena con la leche a fuego medio por 3 minutos. Sirve en un bowl y decora con el plátano en rodajas, las fresas picadas y la miel.',
+      'ingredients': ['1/2 taza de avena', '1 taza de leche', '1 plátano', 'Frutillas al gusto', '1 cucharada de miel'],
+      'instructions': 'Cocina la avena con la leche a fuego medio por 3 minutos. Sirve en un tazón y decora con el plátano en rodajas, las frutillas picadas y la miel.',
     },
     {
       'title': 'Tortilla de verduras',
@@ -26,26 +26,26 @@ class _BreakfastScreenState extends State<BreakfastScreen> {
       'time': '10 min',
       'icon': Icons.circle,
       'color': const Color(0xFF43A047),
-      'ingredients': ['2 huevos', '1/4 de zanahoria rallada', '1/4 de calabacín rallado', 'Sal y pimienta', 'Aceite de oliva'],
+      'ingredients': ['2 huevos', '1/4 de zanahoria rallada', '1/4 de zapallo italiano rallado', 'Sal y pimienta', 'Aceite de oliva'],
       'instructions': 'Bate los huevos y mezcla con las verduras ralladas. Calienta un poco de aceite en un sartén y vierte la mezcla. Cocina 3 minutos por cada lado.',
     },
     {
-      'title': 'Batido de frutas',
+      'title': 'Licuado de frutas',
       'description': 'Refrescante y lleno de vitaminas',
       'time': '3 min',
       'icon': Icons.local_drink,
       'color': const Color(0xFFE53935),
-      'ingredients': ['1 taza de leche', '1/2 taza de yogurt', '1/2 taza de frutas mixtas', '1 cucharada de miel', 'Hielo al gusto'],
+      'ingredients': ['1 taza de leche', '1/2 taza de yogur', '1/2 taza de frutas mixtas', '1 cucharada de miel', 'Hielo al gusto'],
       'instructions': 'Coloca todos los ingredientes en la licuadora. Licúa por 1 minuto hasta obtener una mezcla homogénea. Sirve inmediatamente.',
     },
     {
-      'title': 'Tostadas con aguacate',
+      'title': 'Tostadas con palta',
       'description': 'Grasas saludables para el cerebro',
       'time': '5 min',
       'icon': Icons.whatshot,
       'color': const Color(0xFF7CB342),
-      'ingredients': ['2 rebanadas de pan integral', '1 aguacate maduro', 'Jugo de 1/2 limón', 'Sal y pimienta', 'Tomate cherry'],
-      'instructions': 'Tuesta el pan. Machaca el aguacate y mezcla con el jugo de limón, sal y pimienta. Unta sobre el pan y decora con tomates cherry.',
+      'ingredients': ['2 rebanadas de pan integral', '1 palta madura', 'Jugo de 1/2 limón', 'Sal y pimienta', 'Tomate cherry'],
+      'instructions': 'Tuesta el pan. Machaca la palta y mezcla con el jugo de limón, sal y pimienta. Unta sobre el pan y decora con tomates cherry.',
     },
   ];
 
