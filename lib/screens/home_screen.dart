@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  final void Function(int) onNavigate;
+
+  const HomeScreen({super.key, required this.onNavigate});
 
   @override
   Widget build(BuildContext context) {
@@ -54,42 +56,6 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 32),
-            Container(
-              height: 200,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(24),
-                gradient: LinearGradient(
-                  colors: [cs.primary.withValues(alpha: 0.08), cs.secondary.withValues(alpha: 0.08)],
-                ),
-              ),
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.breakfast_dining, size: 64, color: cs.primary.withValues(alpha: 0.4)),
-                    const SizedBox(height: 8),
-                    Text(
-                      '🎨 Ilustración: Niños desayunando saludablemente',
-                      style: theme.textTheme.bodyMedium?.copyWith(color: cs.onSurfaceVariant),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            const SizedBox(height: 32),
-            SizedBox(
-              width: double.infinity,
-              height: 56,
-              child: FilledButton.icon(
-                onPressed: () {},
-                icon: const Icon(Icons.arrow_forward),
-                label: const Text('Empieza tu camino saludable', style: TextStyle(fontSize: 16)),
-                style: FilledButton.styleFrom(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                ),
-              ),
-            ),
-            const SizedBox(height: 48),
             Row(
               children: [
                 Expanded(
@@ -97,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                     icon: Icons.restaurant,
                     label: 'Recetas',
                     color: cs.primary,
-                    onTap: () {},
+                    onTap: () => onNavigate(1),
                   ),
                 ),
                 const SizedBox(width: 12),
@@ -106,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                     icon: Icons.sports_esports,
                     label: 'Juegos',
                     color: cs.secondary,
-                    onTap: () {},
+                    onTap: () => onNavigate(2),
                   ),
                 ),
                 const SizedBox(width: 12),
@@ -115,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                     icon: Icons.calendar_month,
                     label: 'Hábitos',
                     color: cs.tertiary,
-                    onTap: () {},
+                    onTap: () => onNavigate(3),
                   ),
                 ),
               ],

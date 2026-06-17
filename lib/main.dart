@@ -39,13 +39,15 @@ class MainNavigation extends StatefulWidget {
 class _MainNavigationState extends State<MainNavigation> {
   int _currentIndex = 0;
 
-  final List<Widget> _screens = const [
-    HomeScreen(),
-    BreakfastScreen(),
-    GamesScreen(),
-    HabitsScreen(),
-    ParentsScreen(),
-    CommunityScreen(),
+  void _goToTab(int index) => setState(() => _currentIndex = index);
+
+  late final List<Widget> _screens = [
+    HomeScreen(onNavigate: _goToTab),
+    const BreakfastScreen(),
+    const GamesScreen(),
+    const HabitsScreen(),
+    const ParentsScreen(),
+    const CommunityScreen(),
   ];
 
   @override
@@ -78,7 +80,7 @@ class _MainNavigationState extends State<MainNavigation> {
                   NavigationRailDestination(icon: Icon(Icons.sports_esports_outlined), selectedIcon: Icon(Icons.sports_esports), label: Text('Juegos')),
                   NavigationRailDestination(icon: Icon(Icons.calendar_month_outlined), selectedIcon: Icon(Icons.calendar_month), label: Text('Hábitos')),
                   NavigationRailDestination(icon: Icon(Icons.school_outlined), selectedIcon: Icon(Icons.school), label: Text('Padres')),
-                  NavigationRailDestination(icon: Icon(Icons.groups_outlined), selectedIcon: Icon(Icons.groups), label: Text('Comunidad')),
+                  NavigationRailDestination(icon: Icon(Icons.auto_graph_outlined), selectedIcon: Icon(Icons.auto_graph), label: Text('Impacto')),
                 ],
               ),
               const VerticalDivider(width: 1),
@@ -98,7 +100,7 @@ class _MainNavigationState extends State<MainNavigation> {
               NavigationDestination(icon: Icon(Icons.sports_esports_outlined), selectedIcon: Icon(Icons.sports_esports), label: 'Juegos'),
               NavigationDestination(icon: Icon(Icons.calendar_month_outlined), selectedIcon: Icon(Icons.calendar_month), label: 'Hábitos'),
               NavigationDestination(icon: Icon(Icons.school_outlined), selectedIcon: Icon(Icons.school), label: 'Padres'),
-              NavigationDestination(icon: Icon(Icons.groups_outlined), selectedIcon: Icon(Icons.groups), label: 'Comunidad'),
+              NavigationDestination(icon: Icon(Icons.auto_graph_outlined), selectedIcon: Icon(Icons.auto_graph), label: 'Impacto'),
             ],
           ),
         );
