@@ -115,6 +115,7 @@ class _GamesScreenState extends State<GamesScreen> {
             if (!_quizDone)
               Card(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                color: const Color(0xFFFFF3E0),
                 child: Padding(
                   padding: const EdgeInsets.all(20),
                   child: Column(
@@ -197,6 +198,7 @@ class _GamesScreenState extends State<GamesScreen> {
             else
               Card(
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                color: const Color(0xFFFFF3E0),
                 child: Padding(
                   padding: const EdgeInsets.all(24),
                   child: Column(
@@ -291,6 +293,7 @@ class _StatBadge extends StatelessWidget {
     final theme = Theme.of(context);
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      color: Theme.of(context).colorScheme.surfaceContainerHighest,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
         child: Column(

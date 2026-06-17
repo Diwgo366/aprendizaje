@@ -27,6 +27,7 @@ class RecipeCard extends StatelessWidget {
       elevation: 2,
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      color: Color.lerp(color, Colors.white, 0.88),
       child: ExpansionTile(
         initiallyExpanded: false,
         tilePadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import '../widgets/section_header.dart';
 
 const List<Map<String, dynamic>> _tips = [
-  {'icon': Icons.schedule, 'title': 'Establece horarios fijos', 'desc': 'Los niños se adaptan mejor cuando las comidas tienen un horario consistente cada día.'},
-  {'icon': Icons.emoji_events, 'title': 'Celebra los logros', 'desc': 'Reconoce cuando tu hijo prueba nuevos alimentos o completa una semana de desayunos saludables.'},
-  {'icon': Icons.group, 'title': 'Come en familia', 'desc': 'Los niños que ven a sus padres comer saludablemente tienden a imitar esos comportamientos.'},
-  {'icon': Icons.shopping_cart, 'title': 'Involúcralos en las compras', 'desc': 'Lleva a tus hijos al mercado y déjalos elegir frutas y verduras que les llamen la atención.'},
-  {'icon': Icons.brush, 'title': 'Presentación divertida', 'desc': 'Usa cortadores de galletas para dar formas divertidas a frutas y verduras.'},
+  {'icon': Icons.schedule, 'title': 'Establece horarios fijos', 'desc': 'Los niños se adaptan mejor cuando las comidas tienen un horario consistente cada día.', 'color': Color(0xFF43A047)},
+  {'icon': Icons.emoji_events, 'title': 'Celebra los logros', 'desc': 'Reconoce cuando tu hijo prueba nuevos alimentos o completa una semana de desayunos saludables.', 'color': Color(0xFFFF6F00)},
+  {'icon': Icons.group, 'title': 'Come en familia', 'desc': 'Los niños que ven a sus padres comer saludablemente tienden a imitar esos comportamientos.', 'color': Color(0xFF7B1FA2)},
+  {'icon': Icons.shopping_cart, 'title': 'Involúcralos en las compras', 'desc': 'Lleva a tus hijos al mercado y déjalos elegir frutas y verduras que les llamen la atención.', 'color': Color(0xFF1976D2)},
+  {'icon': Icons.brush, 'title': 'Presentación divertida', 'desc': 'Usa cortadores de galletas para dar formas divertidas a frutas y verduras.', 'color': Color(0xFFE53935)},
 ];
 
 class ParentsScreen extends StatelessWidget {
@@ -70,18 +70,20 @@ class ParentsScreen extends StatelessWidget {
             ),
             ...List.generate(_tips.length, (i) {
               final tip = _tips[i];
+              final tipColor = tip['color'] as Color;
               return Padding(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Card(
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                  color: Color.lerp(tipColor, Colors.white, 0.88),
                   child: ListTile(
                     leading: Container(
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFF57C00).withValues(alpha: 0.12),
+                        color: tipColor.withValues(alpha: 0.12),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Icon(tip['icon'] as IconData, color: const Color(0xFFF57C00), size: 24),
+                      child: Icon(tip['icon'] as IconData, color: tipColor, size: 24),
                     ),
                     title: Text(tip['title'] as String, style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold)),
                     subtitle: Text(tip['desc'] as String, style: theme.textTheme.bodySmall),

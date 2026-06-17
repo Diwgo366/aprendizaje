@@ -127,9 +127,11 @@ class _DataRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: children
-          .map((c) => Padding(
-                padding: EdgeInsets.only(right: children.indexOf(c) < children.length - 1 ? 12 : 0),
-                child: Expanded(child: c),
+          .map((c) => Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(right: children.indexOf(c) < children.length - 1 ? 12 : 0),
+                  child: c,
+                ),
               ))
           .toList(),
     );

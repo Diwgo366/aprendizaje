@@ -31,6 +31,7 @@ class _HabitsScreenState extends State<HabitsScreen> {
             ),
             Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              color: const Color(0xFFFFF8E1),
               child: Padding(
                 padding: const EdgeInsets.all(20),
                 child: Column(
